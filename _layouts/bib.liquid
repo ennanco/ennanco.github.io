@@ -199,6 +199,18 @@
     <div class="periodical">
       {{ entry.note | strip }}
     </div>
+    {% if entry.doi %}
+      {% assign doi_value = entry.doi | strip %}
+      {% assign doi_label = doi_value | remove: 'https://doi.org/' | remove: 'http://doi.org/' | remove: 'https://dx.doi.org/' | remove: 'http://dx.doi.org/' | remove: 'doi:' %}
+      {% if doi_value contains 'http://' or doi_value contains 'https://' %}
+        {% assign doi_url = doi_value %}
+      {% else %}
+        {% assign doi_url = doi_value | prepend: 'https://doi.org/' %}
+      {% endif %}
+      <div class="periodical">
+        DOI: <a href="{{ doi_url }}">{{ doi_label }}</a>
+      </div>
+    {% endif %}
 
     <!-- Links/Buttons -->
     <div class="links">
