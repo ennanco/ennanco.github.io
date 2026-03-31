@@ -1,0 +1,231 @@
+# -----------------------------------------------------------------------------
+# Site settings
+# -----------------------------------------------------------------------------
+
+title: Enrique Fernandez-Blanco
+first_name: Enrique
+middle_name:
+last_name: Fernandez-Blanco
+contact_note: >
+  The fastest way to reach me is via my institutional email.
+description: >
+  Academic website of Enrique Fernández Blanco, Associate Professor at the University of A Coruña.
+footer_text: >
+  Built with <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and <a href="https://github.com/alshedivat/al-folio" target="_blank">al-folio</a>.
+keywords: enrique fernandez blanco, applied artificial intelligence, university of a coruna, citic, rnasa-imedir
+lang: en
+icon: enrique-fernandez-blanco-udc.jpg
+
+url: https://ennanco.github.io
+baseurl: ""
+last_updated: false
+impressum_path:
+back_to_top: true
+
+# -----------------------------------------------------------------------------
+# Theme / Layout
+# -----------------------------------------------------------------------------
+repo_theme_light: default
+repo_theme_dark: dark
+repo_trophies:
+  enabled: false
+
+external_services:
+  github_readme_stats_url: https://github-readme-stats.vercel.app
+  github_profile_trophy_url: https://github-profile-trophy.vercel.app
+
+navbar_fixed: true
+footer_fixed: true
+search_enabled: false
+socials_in_search: false
+posts_in_search: false
+bib_search: false
+max_width: 930px
+
+serve_og_meta: false
+serve_schema_org: false
+og_image: assets/img/enrique-fernandez-blanco-udc.jpg
+
+google_analytics:
+cronitor_analytics:
+pirsch_analytics:
+openpanel_analytics:
+google_site_verification:
+bing_site_verification:
+
+blog_name: notes
+blog_description: disabled in v1
+permalink: /blog/:year/:title/
+lsi: false
+pagination:
+  enabled: false
+related_blog_posts:
+  enabled: false
+  max_related: 0
+
+giscus:
+  repo:
+  repo_id:
+  category: Comments
+  category_id:
+  mapping: title
+  strict: 1
+  reactions_enabled: 1
+  input_position: bottom
+  dark_theme: dark
+  light_theme: light
+  emit_metadata: 0
+  lang: en
+
+disqus_shortname:
+external_sources: []
+newsletter:
+  enabled: false
+  endpoint:
+
+collections:
+  books:
+    output: true
+  news:
+    defaults:
+      layout: post
+    output: true
+  projects:
+    output: true
+  teachings:
+    output: true
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    css_class: "highlight"
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+      start_line: 1
+
+include: ["_pages", "_scripts"]
+exclude:
+  - bin/
+  - CONTRIBUTING.md
+  - CUSTOMIZE.md
+  - Dockerfile
+  - docker-compose.yml
+  - docker-compose-slim.yml
+  - FAQ.md
+  - Gemfile
+  - Gemfile.lock
+  - INSTALL.md
+  - LICENSE
+  - lighthouse_results/
+  - package.json
+  - package-lock.json
+  - _pages/about_einstein.md
+  - purgecss.config.js
+  - README.md
+  - readme_preview/
+  - vendor
+keep_files:
+  - CNAME
+  - .nojekyll
+
+plugins:
+  - jekyll-3rd-party-libraries
+  - jekyll-archives-v2
+  - jekyll-cache-bust
+  - jekyll-email-protect
+  - jekyll-feed
+  - jekyll-get-json
+  - jekyll-imagemagick
+  - jekyll-link-attributes
+  - jekyll-minifier
+  - jekyll-paginate-v2
+  - jekyll-scholar
+  - jekyll-sitemap
+  - jekyll-tabs
+
+jekyll-archives:
+  posts:
+    enabled: [year, tags, categories]
+    permalinks:
+      year: "/blog/:year/"
+      tags: "/blog/:type/:name/"
+      categories: "/blog/:type/:name/"
+  books:
+    enabled: [year, tags, categories]
+
+display_tags: []
+display_categories: []
+
+scholar:
+  last_name: [Fernandez-Blanco, Fernandez Blanco]
+  first_name: [Enrique, E.]
+  style: apa
+  locale: en
+  source: /_bibliography/
+  bibliography: papers.bib
+  bibliography_template: bib
+  bibtex_filters: [latex, smallcaps, superscript]
+  replace_strings: true
+  join_strings: true
+  details_dir: bibliography
+  details_link: Details
+  query: "@*"
+  group_by: year
+  group_order: descending
+
+enable_publication_badges:
+  altmetric: false
+  dimensions: false
+  google_scholar: false
+  inspirehep: false
+
+filtered_bibtex_keywords:
+  [abbr, abstract, additional_info, altmetric, annotation, arxiv, award, award_name, bibtex_show, blog, code, dimensions, eprint, google_scholar_id, hal, html, inspirehep_id, pdf, pmid, poster, preview, selected, slides, supp, video, website]
+
+max_author_limit: 5
+enable_publication_thumbnails: true
+
+external_links:
+  enabled: true
+  rel: external nofollow noopener
+  target: _blank
+  exclude:
+
+imagemagick:
+  enabled: false
+
+lazy_loading_images: true
+
+enable_google_analytics: false
+enable_cronitor_analytics: false
+enable_pirsch_analytics: false
+enable_openpanel_analytics: false
+
+enable_katex: false
+enable_math: false
+enable_tooltips: false
+enable_darkmode: true
+
+third_party_libraries: {}
+
+jekyll_get_json:
+  - data: resume
+    json: assets/json/resume.json
+
+jsonresume:
+  - basics
+  - work
+  - education
+  - publications
+  - projects
+  - volunteer
+  - awards
+  - certificates
+  - skills
+  - languages
+  - interests
+  - references

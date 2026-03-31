@@ -1,0 +1,17 @@
+{% bibliography --query @* %}
+{% assign all_entries = bibliography %}
+{% assign total_pubs = all_entries | size %}
+{% assign journal_articles = all_entries | where: 'type', 'article' | size %}
+{% assign jcr_pubs = all_entries | where: 'jcr', 'true' | size %}
+{% assign d1_pubs = all_entries | where: 'd1', 'true' | size %}
+
+<div class="row mb-4">
+  <div class="col">
+    <div class="d-flex flex-wrap gap-2" style="gap: 0.6rem;">
+      <span class="badge rounded-pill" style="background-color: #495057; color: #fff; padding: 0.55rem 0.9rem;">Total publications: {{ total_pubs }}</span>
+      <span class="badge rounded-pill" style="background-color: #6c757d; color: #fff; padding: 0.55rem 0.9rem;">Journal articles: {{ journal_articles }}</span>
+      <span class="badge rounded-pill" style="background-color: #198754; color: #fff; padding: 0.55rem 0.9rem;">JCR-indexed: {{ jcr_pubs }}</span>
+      <span class="badge rounded-pill" style="background-color: #b02a37; color: #fff; padding: 0.55rem 0.9rem;">D1 publications: {{ d1_pubs }}</span>
+    </div>
+  </div>
+</div>
